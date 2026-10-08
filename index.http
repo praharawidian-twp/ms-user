@@ -1,0 +1,19 @@
+GET http://localhost:3000/
+
+###
+
+GET http://localhost:3000/api/users/2e951f64-f477-44ae-9251-e1eab6f779b0
+
+###
+
+GET http://localhost:3002/api/users/
+
+### 
+
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "email": "budi@gmailcom",
+  "fullName": "Budi"
+}

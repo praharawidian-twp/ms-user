@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+       "lib": [
+          "es5",
+          "es6"
+       ],
+       "target": "es2016",
+       "module": "node16",
+       "rootDir": "./src",
+       "moduleResolution": "node16",
+       "outDir": "./dist",
+       "esModuleInterop": true, 
+       "strict": true,  
+       "emitDecoratorMetadata": true,
+       "experimentalDecorators": true,
+       "sourceMap": true,
+       "skipLibCheck": true
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "build"]
+  }

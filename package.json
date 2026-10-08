@@ -1,0 +1,46 @@
+{
+  "name": "user-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.ts",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:integration": "TESTCONTAINERS_RYUK_DISABLED=true vitest run --config vitest.integration.config.mts",
+    "test:typecheck": "tsc -p tsconfig.test.json",
+    "db:studio": "npx drizzle-kit studio",
+    "db:migrate": "npx drizzle-kit generate",
+    "db:push": "npx drizzle-kit migrate",
+    "dev": "nodemon ./src/server.ts",
+    "build": "tsc -p .",
+    "start": "node dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "drizzle-orm": "^0.44.5",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@testcontainers/postgresql": "11.7.2",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.6.0",
+    "@types/pg": "^8.15.5",
+    "@types/supertest": "^7.2.1",
+    "@vitest/coverage-v8": "4.1.11",
+    "dotenv": "^17.2.3",
+    "drizzle-kit": "^0.31.5",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.3.1",
+    "testcontainers": "11.7.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2",
+    "vitest": "4.1.11"
+  }
+}
